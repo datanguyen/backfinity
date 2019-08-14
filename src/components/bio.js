@@ -43,9 +43,9 @@ const Bio = () => {
           borderRadius: `20%`,
         }}
       />
-      <p style={{ marginTop: rhythm(1/2)}}>
+      <p style={{ marginTop: rhythm(1.5)}}>
         Personal Blog by <strong>{author}</strong> <br />
-        Interested in exploring software craftmanship and development.
+        Interested in exploring software craftmanship & development.
       </p>
     </div>
   )
