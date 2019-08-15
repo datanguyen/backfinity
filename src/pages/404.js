@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 class NotFoundPage extends React.Component {
   render() {
@@ -22,11 +22,11 @@ class NotFoundPage extends React.Component {
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+    query {
+        site {
+            siteMetadata {
+                title
+            }
+        }
     }
-  }
 `

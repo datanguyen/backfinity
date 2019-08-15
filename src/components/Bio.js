@@ -6,30 +6,25 @@ import { rhythm } from '../utils/typography'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
-        childImageSharp {
-          fixed(width: 110, height: 120) {
-            ...GatsbyImageSharpFixed
+      query BioQuery {
+          avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
+              childImageSharp {
+                  fixed(width: 110, height: 120) {
+                      ...GatsbyImageSharpFixed
+                  }
+              }
           }
-        }
+          site {
+              siteMetadata {
+                  author
+              }
+          }
       }
-      site {
-        siteMetadata {
-          author
-        }
-      }
-    }
   `)
 
   const { author } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(1),
-      }}
-    >
+    <div style={{ display: `flex`, marginBottom: rhythm(1) }}>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
@@ -39,11 +34,9 @@ const Bio = () => {
           minWidth: 50,
           borderRadius: `100%`,
         }}
-        imgStyle={{
-          borderRadius: `20%`,
-        }}
+        imgStyle={{ borderRadius: `20%` }}
       />
-      <p style={{ marginTop: rhythm(1.5)}}>
+      <p style={{ marginTop: rhythm(1) }}>
         Personal Blog by <strong>{author}</strong> <br />
         Interested in exploring software craftmanship & development.
       </p>

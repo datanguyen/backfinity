@@ -1,9 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from '../utils/typography'
+import Footer from './Footer'
 
-class Layout extends React.Component {
+export default class Layout extends React.PureComponent {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -32,8 +33,9 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
+        <h2
           style={{
+            color: 'purple',
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
@@ -48,7 +50,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h3>
+        </h2>
       )
     }
     return (
@@ -62,14 +64,8 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     )
   }
 }
-
-export default Layout

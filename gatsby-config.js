@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Backfinity`,
     author: `Dat Tan Nguyen`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Personal blog by Dat Tan Nguyen`,
     siteUrl: `https://backfinity.netlify.com/`,
   },
   plugins: [
@@ -60,7 +60,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/app-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
