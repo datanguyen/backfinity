@@ -67,3 +67,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+/.idea/dictionaries/dattannguyen.xml
+/.idea/.gitignore
+/.idea/backfinity.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
